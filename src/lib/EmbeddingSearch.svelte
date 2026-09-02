@@ -123,7 +123,7 @@
 			id="query"
 			bind:value={query}
 			disabled={is_loading_model || is_searching}
-			placeholder="e.g. how does routing work?"
+			placeholder="e.g. remote functions, deployment, auth"
 		/>
 		<button type="submit" disabled={is_loading_model || is_searching}>
 			{is_searching ? 'Searching…' : 'Search'}
