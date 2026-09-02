@@ -1,0 +1,145 @@
+```js
+// @noErrors
+import { render } from 'svelte/server';
+```
+
+## render
+
+Only available on the server and when compiling with the `server` option.
+Takes a component and returns an object with `body` and `head` properties on it, which you can use to populate the HTML when server-rendering your app.
+
+<div class="ts-block">
+
+```dts
+function render<
+	Comp extends SvelteComponent<any> | Component<any>,
+	Props extends ComponentProps<Comp> = ComponentProps<Comp>
+>(
+	...args: {} extends Props
+		? [
+				component: Comp extends SvelteComponent<any>
+					? ComponentType<Comp>
+					: Comp,
+				options?: {
+					props?: Omit<Props, '$$slots' | '$$events'>;
+					context?: Map<any, any>;
+					idPrefix?: string;
+					csp?: Csp;
+					transformError?: (
+						error: unknown
+					) => unknown | Promise<unknown>;
+				}
+			]
+		: [
+				component: Comp extends SvelteComponent<any>
+					? ComponentType<Comp>
+					: Comp,
+				options: {
+					props: Omit<Props, '$$slots' | '$$events'>;
+					context?: Map<any, any>;
+					idPrefix?: string;
+					csp?: Csp;
+					transformError?: (
+						error: unknown
+					) => unknown | Promise<unknown>;
+				}
+			]
+): RenderOutput;
+```
+
+</div>
+
+
+
+## Csp
+
+<div class="ts-block">
+
+```dts
+type Csp = { nonce?: string; hash?: boolean };
+```
+
+</div>
+
+## RenderOutput
+
+<div class="ts-block">
+
+```dts
+type RenderOutput = SyncRenderOutput &
+	PromiseLike<SyncRenderOutput>;
+```
+
+</div>
+
+## Sha256Source
+
+<div class="ts-block">
+
+```dts
+type Sha256Source = `sha256-${string}`;
+```
+
+</div>
+
+## SyncRenderOutput
+
+<div class="ts-block">
+
+```dts
+interface SyncRenderOutput {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+head: string;
+```
+
+<div class="ts-block-property-details">
+
+HTML that goes into the `<head>`
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+html: string;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> use `body` instead
+
+</div>
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+body: string;
+```
+
+<div class="ts-block-property-details">
+
+HTML that goes somewhere into the `<body>`
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+hashes: {
+	script: Sha256Source[];
+};
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>

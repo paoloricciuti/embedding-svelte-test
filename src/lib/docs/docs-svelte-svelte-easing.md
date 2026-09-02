@@ -1,0 +1,472 @@
+This module provides a set of functions that allow you to manipulate time values in different ways. It’s particularly useful for animations when combined with the `motion` module. 
+
+
+
+```js
+// @noErrors
+import {
+	backIn,
+	backInOut,
+	backOut,
+	bounceIn,
+	bounceInOut,
+	bounceOut,
+	circIn,
+	circInOut,
+	circOut,
+	cubicIn,
+	cubicInOut,
+	cubicOut,
+	elasticIn,
+	elasticInOut,
+	elasticOut,
+	expoIn,
+	expoInOut,
+	expoOut,
+	linear,
+	quadIn,
+	quadInOut,
+	quadOut,
+	quartIn,
+	quartInOut,
+	quartOut,
+	quintIn,
+	quintInOut,
+	quintOut,
+	sineIn,
+	sineInOut,
+	sineOut
+} from 'svelte/easing';
+```
+
+## backIn
+
+Rebound effect on start.
+
+<div class="ts-block">
+
+```dts
+function backIn(t: number): number;
+```
+
+</div>
+
+
+
+## backInOut
+
+Rebound effect on start and end of value range.
+
+<div class="ts-block">
+
+```dts
+function backInOut(t: number): number;
+```
+
+</div>
+
+
+
+## backOut
+
+Rebound effect on end.
+
+<div class="ts-block">
+
+```dts
+function backOut(t: number): number;
+```
+
+</div>
+
+
+
+## bounceIn
+
+Bounce effect on start.
+
+<div class="ts-block">
+
+```dts
+function bounceIn(t: number): number;
+```
+
+</div>
+
+
+
+## bounceInOut
+
+Bounce effect on start and end.
+
+<div class="ts-block">
+
+```dts
+function bounceInOut(t: number): number;
+```
+
+</div>
+
+
+
+## bounceOut
+
+Bounce effect on end.
+
+<div class="ts-block">
+
+```dts
+function bounceOut(t: number): number;
+```
+
+</div>
+
+
+
+## circIn
+
+Circular effect, accelerate on start.
+
+<div class="ts-block">
+
+```dts
+function circIn(t: number): number;
+```
+
+</div>
+
+
+
+## circInOut
+
+Circular effect, accelerate on start, decelerate towards end.
+
+<div class="ts-block">
+
+```dts
+function circInOut(t: number): number;
+```
+
+</div>
+
+
+
+## circOut
+
+Circular effect, decelerate towards end.
+
+<div class="ts-block">
+
+```dts
+function circOut(t: number): number;
+```
+
+</div>
+
+
+
+## cubicIn
+
+Cubic scaling, accelerate on start
+
+<div class="ts-block">
+
+```dts
+function cubicIn(t: number): number;
+```
+
+</div>
+
+
+
+## cubicInOut
+
+Cubic scaling, accelerate on start, decelerate towards end.
+
+<div class="ts-block">
+
+```dts
+function cubicInOut(t: number): number;
+```
+
+</div>
+
+
+
+## cubicOut
+
+Cubic scaling, decelerate towards end.
+
+<div class="ts-block">
+
+```dts
+function cubicOut(t: number): number;
+```
+
+</div>
+
+
+
+## elasticIn
+
+Elastic effect on start.
+
+<div class="ts-block">
+
+```dts
+function elasticIn(t: number): number;
+```
+
+</div>
+
+
+
+## elasticInOut
+
+Elastic effect on start and end.
+
+<div class="ts-block">
+
+```dts
+function elasticInOut(t: number): number;
+```
+
+</div>
+
+
+
+## elasticOut
+
+Elastic effect on end.
+
+<div class="ts-block">
+
+```dts
+function elasticOut(t: number): number;
+```
+
+</div>
+
+
+
+## expoIn
+
+Exponential effect on start.
+
+<div class="ts-block">
+
+```dts
+function expoIn(t: number): number;
+```
+
+</div>
+
+
+
+## expoInOut
+
+Exponential effect on start and end.
+
+<div class="ts-block">
+
+```dts
+function expoInOut(t: number): number;
+```
+
+</div>
+
+
+
+## expoOut
+
+Exponential effect on end.
+
+<div class="ts-block">
+
+```dts
+function expoOut(t: number): number;
+```
+
+</div>
+
+
+
+## linear
+
+Returns value as is.
+
+<div class="ts-block">
+
+```dts
+function linear(t: number): number;
+```
+
+</div>
+
+
+
+## quadIn
+
+Quadratic scaling, accelerate on start.
+
+<div class="ts-block">
+
+```dts
+function quadIn(t: number): number;
+```
+
+</div>
+
+
+
+## quadInOut
+
+Quadratic scaling, accelerate on start, decelerate towards end.
+
+<div class="ts-block">
+
+```dts
+function quadInOut(t: number): number;
+```
+
+</div>
+
+
+
+## quadOut
+
+Quadratic scaling, decelerate towards end.
+
+<div class="ts-block">
+
+```dts
+function quadOut(t: number): number;
+```
+
+</div>
+
+
+
+## quartIn
+
+Quartic scaling, accelerate on start.
+
+<div class="ts-block">
+
+```dts
+function quartIn(t: number): number;
+```
+
+</div>
+
+
+
+## quartInOut
+
+Quartic scaling, accelerate on start, decelerate towards end.
+
+<div class="ts-block">
+
+```dts
+function quartInOut(t: number): number;
+```
+
+</div>
+
+
+
+## quartOut
+
+Quartic scaling, decelerate towards end.
+
+<div class="ts-block">
+
+```dts
+function quartOut(t: number): number;
+```
+
+</div>
+
+
+
+## quintIn
+
+Quintic scaling, accelerate on start.
+
+<div class="ts-block">
+
+```dts
+function quintIn(t: number): number;
+```
+
+</div>
+
+
+
+## quintInOut
+
+Quintic scaling, accelerate on start, decelerate towards end.
+
+<div class="ts-block">
+
+```dts
+function quintInOut(t: number): number;
+```
+
+</div>
+
+
+
+## quintOut
+
+Quintic scaling, decelerate towards end.
+
+<div class="ts-block">
+
+```dts
+function quintOut(t: number): number;
+```
+
+</div>
+
+
+
+## sineIn
+
+Sinusoidal effect, accelerate on start.
+
+<div class="ts-block">
+
+```dts
+function sineIn(t: number): number;
+```
+
+</div>
+
+
+
+## sineInOut
+
+Sinusoidal effect, accelerate on start, decelerate towards end.
+
+<div class="ts-block">
+
+```dts
+function sineInOut(t: number): number;
+```
+
+</div>
+
+
+
+## sineOut
+
+Sinusoidal effect, decelerate towards end.
+
+<div class="ts-block">
+
+```dts
+function sineOut(t: number): number;
+```
+
+</div>
