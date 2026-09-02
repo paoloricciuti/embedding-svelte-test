@@ -100,7 +100,7 @@
 		disabled={is_loading_model || is_searching}
 	>
 		{#each embedding_models as model (model.name)}
-			<option value={model.name}>{model.name}</option>
+			<option value={model.name}>{model.name} (~{model.download_size_mb} MB)</option>
 		{/each}
 	</select>
 	{#if is_loading_model}
