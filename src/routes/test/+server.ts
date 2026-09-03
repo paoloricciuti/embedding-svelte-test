@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import url from '#lib/index.ts?url';
+import url from '#lib/EmbeddingSearch.svelte?url';
 
 export async function GET() {
 	try {
