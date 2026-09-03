@@ -5,7 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "vite build && echo \"test file\" > .vercel/output/functions/test.txt",
 		"preview": "vite preview",
 		"generate:embeddings": "node scripts/generate-embeddings.ts",
 		"prepare": "svelte-kit sync || echo ''",
