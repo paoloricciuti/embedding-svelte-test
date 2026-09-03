@@ -8,9 +8,9 @@ export async function GET() {
 			file,
 			cwd: process.cwd()
 		});
-	} catch {
+	} catch (e) {
 		return Response.json({
-			error: 'File not found',
+			error: e instanceof Error ? e.message : String(e),
 			cwd: process.cwd()
 		});
 	}
